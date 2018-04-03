@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+</head>
+<body onload="chart()">
+<form onsubmit="parsedata()" method="post">
+  Search: <input type="text" name="search"><br>
+  <input type="submit" value="Submit">
+</form>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script
+src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<script>
+    function chart(){
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        title:{
+            text: "Letter Counting"
+        },
+        axisY: {
+            title: "Amount"
+        },
+        data: [{
+            type: "column",
+            showInLegend: true,
+            legendMarkerColor: "grey",
+            legendText: "Letter",
+            dataPoints: [
+                { y: 300, label: "A" },
+                { y: 266,  label: "B" },
+                { y: 169,  label: "C" },
+                { y: 158,  label: "D" },
+                { y: 142,  label: "E" },
+                { y: 100,  label: "F" },
+                { y: 978,  label: "G" },
+                { y: 800,  label: "H" },
+                { y: 978,  label: "I" },
+                { y: 978,  label: "J" },
+                { y: 978,  label: "K" },
+                { y: 978,  label: "L" },
+                { y: 978,  label: "M" },
+                { y: 978,  label: "N" },
+                { y: 978,  label: "O" },
+                { y: 978,  label: "P" },
+                { y: 978,  label: "Q" },
+                { y: 978,  label: "R" },
+                { y: 978,  label: "S" },
+                { y: 978,  label: "T" },
+                { y: 978,  label: "U" },
+                { y: 978,  label: "V" },
+                { y: 978,  label: "W" },
+                { y: 978,  label: "X" },
+                { y: 978,  label: "Y" },
+                { y: 978,  label: "Z" }
+                ]
+            }]
+        });
+        chart.render();
+
+    }
+
+    function parsedata(){
+        var searched = document.getElementById("search").value;
+
+    }
+</script>
+
+</body>
+</html>
